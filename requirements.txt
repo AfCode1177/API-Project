@@ -1,0 +1,7 @@
+flask>=3.0
+flask-limiter>=3.5
+python-dotenv>=1.0
+google-genai>=1.0
+cryptography>=42
+gunicorn>=22
+pytest>=8

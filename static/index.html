@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Routine Auditor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Skincare Bot</h1>
+      <p>Tell me your skin type and the products you use. I'll check them for clashes, fill in missing steps, and order your morning and night routine.</p>
+    </div>
+    <button id="reset" type="button">New chat</button>
+  </header>
+
+  <main id="log" aria-live="polite">
+    <section id="empty">
+      <p class="hint">Try one of these:</p>
+      <button class="example" type="button">I have combination skin. I use a retinol serum, a glycolic acid toner, a vitamin C serum and a gentle cleanser.</button>
+      <button class="example" type="button">Is niacinamide safe to use with vitamin C?</button>
+      <button class="example" type="button">Oily skin, $30 budget. I use benzoyl peroxide wash and a salicylic acid serum. What am I missing?</button>
+    </section>
+  </main>
+
+  <form id="composer" autocomplete="off">
+    <label for="msg" class="sr">Your message</label>
+    <textarea id="msg" rows="2" maxlength="2000" placeholder="List your skin type and products…"></textarea>
+    <div class="row">
+      <span id="count">0 / 2000</span>
+      <button id="send" type="submit">Check my routine</button>
+    </div>
+    <p class="note">Cosmetic guidance only, not medical advice. For rashes, changing moles or severe acne, see a dermatologist.</p>
+  </form>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
